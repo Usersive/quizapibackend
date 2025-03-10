@@ -21,8 +21,8 @@ from django.conf import settings
 from honeypot.decorators import check_honeypot
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-      path('admin/', check_honeypot(admin.site.urls)),
+    path('quizapiadmin/', admin.site.urls),
+    # path('admin/', check_honeypot(admin.site.urls)),
     path("", include("quizapp.urls")),
 ]
 
