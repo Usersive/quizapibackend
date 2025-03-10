@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'unfold',
-    'honeypot',
     'cloudinary_storage',
     'cloudinary',
 ]
