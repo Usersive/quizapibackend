@@ -92,8 +92,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'quizproject.wsgi.application'
 
 
-CORS_ALLOW_ALL_ORIGINS = True
-CSRF_TRUSTED_ORIGINS = ['http://localhost:5173']
+CORS_ALLOWED_ALL_ORIGINS =[
+    'http://localhost:5173',
+    'https://horendjangoreactquiz.onrender.com'
+    ]
 # Database
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
