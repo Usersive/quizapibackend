@@ -94,7 +94,8 @@ WSGI_APPLICATION = 'quizproject.wsgi.application'
 
 CORS_ALLOWED_ALL_ORIGINS =[
     # 'http://localhost:5173',
-    'https://horendjangoreactquiz.onrender.com'
+    # 'https://horendjangoreactquiz.onrender.com'
+    'https://horendjangoreactquiz.onrender.com/'
     ]
 # Database
 # Database
