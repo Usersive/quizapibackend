@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('quizapiadmin/', admin.site.urls),
+    path('horenadmin/', admin.site.urls),
     path("", include("quizapp.urls")),
 ]
 

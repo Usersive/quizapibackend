@@ -33,7 +33,7 @@ SECRET_KEY =('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['djangoreactquizapi.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'djangoreactquizapi.onrender.com']
 
 
 # Application definition
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'quizapp',
     'rest_framework',
     'corsheaders',
-    'unfold',
+    # 'unfold',
     'cloudinary_storage',
     'cloudinary',
 ]
@@ -117,9 +117,7 @@ DATABASES = {
         'USER': config('USER'),  
         'PASSWORD': config('PASSWORD'),  
         'HOST': config('HOST'), 
-        'HOST':'pg-quizapi-horenquizapi.e.aivencloud.com', 
         'PORT': config('PORT', "8000"),  
-        'PORT': '12248',  
     }
 }
 
@@ -205,13 +203,13 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 
-UNFOLD ={
-    "SITE_TITLE": "Quiz API",
-    "SITE_HEADER": "HOREN ADMIN",
-    "SITE_URL": '/admin',
-    "SHOW_ADMIN_LOGO": True,
-    "COLLAPSIBLE_APPS": True,
-}
+# UNFOLD ={
+#     "SITE_TITLE": "Quiz API",
+#     "SITE_HEADER": "HOREN ADMIN",
+#     "SITE_URL": '/admin',
+#     "SHOW_ADMIN_LOGO": True,
+#     "COLLAPSIBLE_APPS": True,
+# }
 
 # Security settings for production
 SECURE_SSL_REDIRECT = True  # Redirects all HTTP requests to HTTPS
