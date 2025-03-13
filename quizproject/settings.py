@@ -92,11 +92,38 @@ TEMPLATES = [
 WSGI_APPLICATION = 'quizproject.wsgi.application'
 
 
-CORS_ALLOWED_ALL_ORIGINS =[
-    # 'http://localhost:5173',
-    # 'https://horendjangoreactquiz.onrender.com'
-    'https://horendjangoreactquiz.onrender.com/'
-    ]
+# CORS_ALLOWED_ORIGINS = [
+#     "https://horendjangoreactquiz.onrender.com",
+# ]
+
+
+# CORS_ALLOW_CREDENTIALS = True
+
+
+CORS_ALLOWED_ORIGINS = [
+    "https://horendjangoreactquiz.onrender.com",  # Your frontend URL
+]
+CORS_ALLOW_ALL_ORIGINS = True
+
+
+CORS_ALLOW_HEADERS = [
+    "content-type",
+    "authorization",
+    "X-CSRFToken",
+    "accept",
+]
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS",
+]
+
+
+
+
 # Database
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
