@@ -27,7 +27,7 @@ class QuestionOptionAdmin(admin.ModelAdmin):
 
 @admin.register(QuizSetting)
 class QuizSettingAdmin(admin.ModelAdmin):
-    list_display = ('seconds_per_question', 'score_per_question',)
+    list_display = ['seconds_per_question', 'score_per_question']
 
 @admin.register(QuizConfig)
 class QuizConfigAdmin(admin.ModelAdmin):
