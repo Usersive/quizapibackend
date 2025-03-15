@@ -31,6 +31,6 @@ class QuizSettingAdmin(admin.ModelAdmin):
 
 @admin.register(QuizConfig)
 class QuizConfigAdmin(admin.ModelAdmin):
-    list_display = ('num_questions')
+    list_display = ['num_questions']
 
   
