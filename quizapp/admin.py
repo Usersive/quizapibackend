@@ -12,8 +12,7 @@ class StudentAdmin(admin.ModelAdmin):
     list_display = ['matricNum', 'score', 'status']
     list_display_links= ('matricNum')
     search_fields = ['matricNum', 'score', 'status']
-    filter_horizontal=()
-    list_filter=()
+    
 
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
