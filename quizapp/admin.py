@@ -10,7 +10,7 @@ from quizapp.models import Student, Question, QuestionOption, QuizConfig, QuizSe
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     list_display = ['matricNum', 'score', 'status']
-    list_display_links= ('matricNum')
+    list_display_links= ['matricNum']
     search_fields = ['matricNum', 'score', 'status']
     
 
