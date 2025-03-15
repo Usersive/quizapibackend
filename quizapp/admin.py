@@ -10,14 +10,27 @@ from quizapp.models import Student, Question, QuestionOption, QuizConfig, QuizSe
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     list_display = ('matricNum', 'score', 'status')
+    list_display_links= ('matricNum')
+    search_fields = ['matricNum', 'score', 'status']
+    filter_horizontal=()
+    list_filter=()
 
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ('question',)
+    search_fields = ['question']
 
 @admin.register(QuestionOption)
 class QuestionOptionAdmin(admin.ModelAdmin):
     list_display = ('option', 'is_correct', 'question')
 
-admin.site.register(QuizSetting)
-admin.site.register(QuizConfig)
+
+@admin.register(QuizSetting)
+class QuizSettingAdmin(admin.ModelAdmin):
+    list_display = (' seconds_per_question', 'score_per_question')
+
+@admin.register(QuizConfig)
+class QuizConfigAdmin(admin.ModelAdmin):
+    list_display = ('num_questions')
+
+  
